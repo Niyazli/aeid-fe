@@ -1,0 +1,28 @@
+<div class="container" #container>
+  <ui-header></ui-header>
+  <mat-sidenav-container autosize class="example-container" [hasBackdrop]="false">
+    <mat-sidenav [style.width.px]="container.clientWidth / 2" position="end" #sidenav mode="push">
+      <aside>
+        <ui-comment-chat></ui-comment-chat>
+      </aside>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <main>
+        <nav (click)="sidenav.toggle()">
+          <ui-sidebar></ui-sidebar>
+        </nav>
+        <section [style.width.px]="sidenav.opened ? container.clientWidth / 2 : null" (click)="sidenav.toggle()">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dignissimos eos hic nesciunt odit porro quibusdam, voluptates
+            voluptatibus! Delectus ea maiores omnis quis tenetur! Adipisci, amet asperiores atque dolorem doloribus eligendi ex expedita explicabo
+            iste itaque neque non, nostrum omnis placeat porro quae quo sunt totam ullam veniam vero vitae voluptatem. A dolores, ducimus enim fugit
+            impedit incidunt inventore ipsam, iusto laudantium molestiae nemo quam sapiente similique ut voluptates. Blanditiis corporis deserunt id
+            nemo obcaecati, sapiente sunt ut! Consequatur, debitis eius eum expedita explicabo minus nam nisi officia optio quis quos repudiandae
+            temporibus ut! Alias eligendi, nisi. Exercitationem, nemo quod.
+          </p>
+        </section>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
