@@ -10,8 +10,11 @@ nav {
   display: flex;
   align-items: center;
   padding-right: 40px;
+  overflow-y: auto;
 
   .menu {
+    height: 100%;
+
     &-item {
       color: $bg-light;
 
