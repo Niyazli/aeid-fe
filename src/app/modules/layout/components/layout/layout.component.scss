@@ -2,10 +2,14 @@
 
 :host {
   display: block;
-  height: calc(100vh - 145px);
+  height: 100vh;
 
   mat-sidenav {
     box-shadow: none;
+
+    &-container {
+      height: calc(100vh - 145px);
+    }
   }
 
   .container {
@@ -39,10 +43,6 @@
       }
     }
   }
-}
-
-mat-sidenav-container {
-  height: 100%;
 }
 
 aside,

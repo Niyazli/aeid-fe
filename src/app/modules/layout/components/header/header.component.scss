@@ -1,4 +1,14 @@
+@import "variable";
+
 :host {
-  height: 145px;
+  height: $header-height;
   display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 50px;
 }

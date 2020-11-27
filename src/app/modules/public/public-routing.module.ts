@@ -17,6 +17,22 @@ const routes: Routes = [
         path: 'video',
         component: VideoPageComponent,
       },
+      {
+        path: 'podcast',
+        component: VideoPageComponent,
+      },
+      {
+        path: 'forum',
+        component: VideoPageComponent,
+      },
+      {
+        path: 'sos',
+        component: VideoPageComponent,
+      },
+      {
+        path: 'about',
+        component: VideoPageComponent,
+      },
     ],
   },
 ];

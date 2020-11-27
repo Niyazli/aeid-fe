@@ -9,7 +9,7 @@
 
     <mat-sidenav-content>
       <main>
-        <nav (click)="sidenav.toggle()">
+        <nav>
           <ui-sidebar></ui-sidebar>
         </nav>
         <section [style.width.px]="sidenav.opened ? container.clientWidth / 2 : null" (click)="sidenav.toggle()">
