@@ -1,0 +1,25 @@
+@import 'reset';
+@import 'bootstrap-grid';
+@import 'material-reset';
+@import 'variable';
+@import 'media-queries';
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(244.53deg, #00C898 0%, #2BD7C2 100%);
+  background-color: $primary-color;
+}
+
+.container {
+  outline: 1px dashed red;
+
+  @include desktop() {
+    margin: 0 0 0 230px;
+    max-width: calc(100% - 230px);
+    padding: 0;
+  }
+}
