@@ -1,0 +1,41 @@
+<mat-list-item class="h-auto">
+  <!--        <ng-container>-->
+  <img mat-list-avatar [src]="comment.avatarUrl" [alt]="comment.author" />
+  <p mat-line class="text-bold">{{ comment.author }}</p>
+  <small mat-line class="text-secondary">{{ comment.updated | date }}</small>
+  <p class="text-nowrap" mat-line *ngIf="!comment.isNew">{{ comment.commentText }}</p>
+
+  <div mat-line class="d-flex align-items-center" *ngIf="comment.isNew">
+    <mat-form-field hintLabel="Please shortly describe company profile" class="w-100">
+      <mat-label>Comment</mat-label>
+      <textarea rows="1" matInput #input [(ngModel)]="comment.commentText"></textarea>
+      <mat-hint align="end">{{ input.value?.length || 0 }}/250</mat-hint>
+    </mat-form-field>
+
+    <button class="mx-2" mat-fab color="primary" [disabled]="!comment.commentText" (click)="comment.isNew = false">
+      <mat-icon class="text-white">done</mat-icon>
+    </button>
+    <button class="mx-2" mat-mini-fab color="warn">
+      <mat-icon class="text-white">close</mat-icon>
+    </button>
+  </div>
+
+  <div mat-line class="action-row" *ngIf="!hideAction">
+    <button mat-icon-button color="primary">
+      <mat-icon color="primary">thumb_up</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>thumb_down</mat-icon>
+    </button>
+    <button mat-icon-button (click)="comment.expanded = !comment.expanded">
+      <mat-icon class="text-secondary">forum</mat-icon>
+      <span class="text-secondary">0</span>
+    </button>
+    <button mat-button color="primary" (click)="handleReply(); comment.expanded = true">REPLY</button>
+  </div>
+  <mat-divider></mat-divider>
+
+  <mat-list mat-line *ngIf="comment.expanded">
+    <ng-content></ng-content>
+  </mat-list>
+</mat-list-item>

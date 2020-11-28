@@ -1,0 +1,21 @@
+mat-divider {
+  bottom: -15px;
+}
+
+img {
+  align-self: flex-start;
+}
+
+.action-row {
+  button {
+    margin-right: 5px;
+
+    &:first-child {
+      margin-left: -5px;
+    }
+
+    span {
+      margin-left: 4px;
+    }
+  }
+}

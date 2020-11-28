@@ -1,4 +1,11 @@
+@import 'variable';
+
 //SIDENAV
 mat-sidenav-container {
   background-color: transparent !important;
+}
+
+/*ICON*/
+mat-icon {
+  color: $text-secondary;
 }

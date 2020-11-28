@@ -1,1 +1,21 @@
-<ui-skeleton-chat></ui-skeleton-chat>
+<!--<ui-skeleton-chat></ui-skeleton-chat>-->
+<div class="row h-100">
+  <div class="col-12">
+    <mat-list *ngIf="comments">
+      <div mat-subheader class="text-bold">{{ comments.length }} Replies</div>
+      <mat-divider></mat-divider>
+      <div ui-comment-box *ngFor="let comment of comments" [comment]="comment">
+        <div ui-comment-box *ngFor="let reply of comment.replies; let i = index" [index]="i" [comment]="reply" [hideAction]="true"></div>
+      </div>
+    </mat-list>
+  </div>
+  <div class="col-12 mt-auto">
+    <mat-card class="d-flex align-items-center justify-content-between">
+      <mat-form-field class="w-100" hintLabel="Please shortly describe company profile">
+        <mat-label>Comment</mat-label>
+        <textarea rows="1" matInput></textarea>
+      </mat-form-field>
+      <button class="ml-2 rounded-pill" mat-raised-button color="primary">Reply</button>
+    </mat-card>
+  </div>
+</div>

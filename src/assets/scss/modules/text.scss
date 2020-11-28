@@ -1,0 +1,21 @@
+@import 'variable';
+
+.text {
+  /*COLOR*/
+  &-secondary {
+    color: $text-secondary !important;
+  }
+  &-white {
+    color: $bg-light !important;
+  }
+
+  /*WEIGHT*/
+  &-bold {
+    font-weight: bold !important;
+  }
+
+  /*WRAP*/
+  &-nowrap {
+    white-space: normal !important;
+  }
+}
