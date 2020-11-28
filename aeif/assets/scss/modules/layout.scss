@@ -4,6 +4,8 @@
 @import 'variable';
 @import 'media-queries';
 @import 'button';
+@import 'text';
+@import 'size';
 
 body {
   font-family: sans-serif;
@@ -16,7 +18,7 @@ body {
 }
 
 .container {
-  outline: 1px dashed red;
+  //outline: 1px dashed red;
 
   @include desktop() {
     margin: 0 0 0 230px;
