@@ -1,6 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+@import 'font';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -129,7 +130,14 @@ $aeif-theme: mat-light-theme(
   )
 );
 
+$custom-typography: mat-typography-config(
+  $font-family: 'Condensed, sans-serif',
+  //$headline: mat-typography-level(32px, 48px, 700),
+  //$body-1: mat-typography-level(16px, 24px, 500),,
+);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($aeif-theme);
+@include mat-base-typography($custom-typography);

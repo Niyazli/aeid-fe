@@ -1,6 +1,33 @@
 @import 'variable';
 
-img {
-  margin-bottom: 10px;
-  border: 1px solid $bg-secondary;
+.img-wrapper {
+  position: relative;
+
+  mat-icon {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: $black-opacity;
+    font-size: 5rem;
+    color: $bg-light;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+  }
+
+  img {
+    margin-bottom: 10px;
+    border: 1px solid $bg-secondary;
+  }
+
+  &:hover {
+    mat-icon {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }

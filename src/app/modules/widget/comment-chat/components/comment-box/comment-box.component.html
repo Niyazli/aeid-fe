@@ -29,7 +29,7 @@
     </button>
     <button mat-icon-button (click)="comment.expanded = !comment.expanded">
       <mat-icon class="text-secondary">forum</mat-icon>
-      <span class="text-secondary">0</span>
+      <span class="text-secondary">{{ comment.replies?.length }}</span>
     </button>
     <button mat-button color="primary" (click)="handleReply(); comment.expanded = true">REPLY</button>
   </div>

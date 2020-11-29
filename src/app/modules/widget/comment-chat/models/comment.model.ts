@@ -1,7 +1,7 @@
 export class CommentModel {
   author = 'Name Surname';
   updated = new Date();
-  avatarUrl = 'https://www.pngkey.com/png/detail/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png';
+  avatarUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9rZin0MNBpUNcaV7PtbjXwUEGszAIRE02cA&usqp=CAU';
   expanded = false;
   commentText?: string;
   replies?: CommentModel[];

@@ -39,6 +39,7 @@
 }
 
 button {
+  box-shadow: none !important;
   &.rounded {
     &-pill {
       border-radius: 30px;

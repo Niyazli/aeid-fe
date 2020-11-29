@@ -1,11 +1,10 @@
 .post {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 20px;
+
   &-content {
     max-height: 550px;
     overflow-y: auto;
-  }
-  &-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 }

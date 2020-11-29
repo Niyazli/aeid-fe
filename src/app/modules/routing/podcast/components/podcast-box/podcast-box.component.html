@@ -3,8 +3,8 @@
     <button class="align-self-start" mat-list-avatar mat-mini-fab color="primary" (click)="isPlay = !isPlay">
       <mat-icon class="text-white">{{ isPlay ? 'pause_circle_filled' : 'play_circle_filled' }}</mat-icon>
     </button>
-    <p class="text-bold" mat-line>Podcast name</p>
-    <p mat-line class="text-nowrap">
+    <p class="text-bold mb-2" mat-line>Podcast name</p>
+    <p mat-line class="text-nowrap max-line-2" [class.text-cut]="!isPlay">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt doloremque ipsa magni placeat repellat vel! Accusantium amet
       animi deleniti dignissimos error fugiat nam, vel. A aliquam, aspernatur atque cupiditate deleniti doloribus excepturi id iusto laboriosam maxime
       minima mollitia nemo perferendis perspiciatis praesentium quo ratione reiciendis repudiandae sit, sunt tenetur velit veniam voluptate. Ad
@@ -21,11 +21,11 @@
       <div *ngIf="isPlay" class="w-100 d-flex align-items-center">
         <button mat-icon-button><mat-icon>replay_10</mat-icon></button>
         <button mat-icon-button><mat-icon>forward_10</mat-icon></button>
-        <mat-slider value="50" class="w-100"></mat-slider>
+        <mat-slider color="warn" value="50" class="w-100"></mat-slider>
       </div>
       <div class="w-100 align-items-center justify-content-end d-flex">
         <button mat-button>
-          <mat-icon>thumb_up</mat-icon>
+          <mat-icon color="primary">thumb_up</mat-icon>
           <span class="ml-2">7</span>
         </button>
         <button mat-button>
