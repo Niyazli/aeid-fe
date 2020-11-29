@@ -10,4 +10,8 @@ ui-layout {
     z-index: 2;
     background-color: $bg-light;
   }
+
+  main {
+    flex-basis: 100%;
+  }
 }

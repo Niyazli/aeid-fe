@@ -1,8 +1,9 @@
-<div class="post">
+<div class="post" *ngIf="postQueryParams">
   <h3 class="mb-1 text-primary-red">TOPIC OF VIDEO FOR EXAMPLE</h3>
   <small class="mb-1">01.09.2020 / 15:36</small>
   <div class="post-content">
     <img
+      *ngIf="postQueryParams.hasVideo"
       class="img-contain"
       src="https://www.digitalhrtech.com/wp-content/uploads/2018/10/AdobeStock_113080915-1-Converted.jpg"
       alt="post"

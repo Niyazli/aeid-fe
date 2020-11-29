@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {LayoutComponent} from '../../../../layout/components/layout/layout.component';
-import {LayoutService} from '../../../../layout/services/layout.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -16,6 +15,6 @@ export class VideoPageComponent implements OnInit {
 
   handleView(): void {
     // view/123
-    this.router.navigate(['view/123'], {relativeTo: this.route});
+    this.router.navigate(['view/123'], {relativeTo: this.route, queryParams: {hasVideo: true}});
   }
 }
