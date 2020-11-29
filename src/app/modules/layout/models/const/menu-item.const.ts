@@ -35,7 +35,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     label: 'YARDIM',
     description:
       'Text of the video category where possibly we need to think and add something cuz this part will inform about smth system users or may be we can add text of how to apply for blogger',
-    link: 'sos',
+    link: 'help',
     action: {
       label: 'Become a Blogger',
       action: 'sos',

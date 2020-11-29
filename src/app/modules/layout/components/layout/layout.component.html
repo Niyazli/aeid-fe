@@ -12,7 +12,7 @@
         <nav>
           <ui-sidebar></ui-sidebar>
         </nav>
-        <section [style.width.px]="sidenav.opened ? container.clientWidth / 2 : null" (click)="sidenav.toggle()">
+        <section [style.width.px]="sidenav.opened ? container.clientWidth / 2 : null">
           <ng-content></ng-content>
         </section>
       </main>

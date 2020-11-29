@@ -4,7 +4,12 @@ import {Routes, RouterModule} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./modules/public/public.module').then(m => m.PublicModule),
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./modules/routing/home/home.module').then(m => m.HomeModule),
   },
 ];
 

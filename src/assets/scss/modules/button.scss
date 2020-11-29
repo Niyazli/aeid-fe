@@ -13,6 +13,29 @@
     border-color: $bg-light !important;
     color: $bg-light !important;
   }
+
+  &-back {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover {
+      mat-icon {
+        animation: slide 1s ease-in-out infinite;
+      }
+    }
+
+    mat-icon {
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }
 
 button {
@@ -20,5 +43,16 @@ button {
     &-pill {
       border-radius: 30px;
     }
+  }
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
   }
 }
