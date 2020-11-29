@@ -53,4 +53,9 @@ export class CommentChatComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleAddComment(value: string): void {
+    console.log(value);
+    this.comments.push(new CommentModel(false, value));
+  }
 }

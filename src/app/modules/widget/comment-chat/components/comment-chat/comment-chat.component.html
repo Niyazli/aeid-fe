@@ -13,9 +13,9 @@
     <mat-card class="d-flex align-items-center justify-content-between">
       <mat-form-field class="w-100" hintLabel="Please shortly describe company profile">
         <mat-label>Comment</mat-label>
-        <textarea rows="1" matInput></textarea>
+        <textarea rows="1" matInput  #input></textarea>
       </mat-form-field>
-      <button class="ml-2 rounded-pill" mat-raised-button color="primary">Reply</button>
+      <button class="ml-2 rounded-pill" mat-raised-button (click)="handleAddComment(input.value)" color="primary">Reply</button>
     </mat-card>
   </div>
 </div>

@@ -7,7 +7,8 @@ export class CommentModel {
   replies?: CommentModel[];
   isNew: boolean;
 
-  constructor(isNew = false) {
+  constructor(isNew = false, commentText?: string) {
     this.isNew = isNew;
+    this.commentText = commentText;
   }
 }

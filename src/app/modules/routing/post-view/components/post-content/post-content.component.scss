@@ -5,6 +5,9 @@
 
   &-content {
     max-height: 550px;
-    overflow-y: auto;
+
+    p {
+      text-align: justify;
+    }
   }
 }
