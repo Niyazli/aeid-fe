@@ -1,0 +1,39 @@
+<mat-list>
+  <mat-list-item class="h-auto">
+    <button class="align-self-start" mat-list-avatar mat-mini-fab color="primary" (click)="isPlay = !isPlay">
+      <mat-icon class="text-white">{{ isPlay ? 'pause_circle_filled' : 'play_circle_filled' }}</mat-icon>
+    </button>
+    <p class="text-bold" mat-line>Podcast name</p>
+    <p mat-line class="text-nowrap">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt doloremque ipsa magni placeat repellat vel! Accusantium amet
+      animi deleniti dignissimos error fugiat nam, vel. A aliquam, aspernatur atque cupiditate deleniti doloribus excepturi id iusto laboriosam maxime
+      minima mollitia nemo perferendis perspiciatis praesentium quo ratione reiciendis repudiandae sit, sunt tenetur velit veniam voluptate. Ad
+      blanditiis dicta facere quaerat qui reiciendis temporibus ullam vel. Aliquid at atque, beatae consequatur, deleniti dolore dolores enim error
+      est illo in inventore iure numquam odit perferendis quibusdam rem rerum saepe veritatis voluptatibus. Accusamus, aspernatur, beatae cumque enim
+      error illum officiis provident sunt temporibus veniam voluptatem?
+    </p>
+    <div mat-line class="d-flex align-items-center justify-content-between mt-3">
+      <div class="w-100 d-flex align-items-center justify-content-between" *ngIf="!isPlay">
+        <span class="text-secondary">Author: Name Surname</span>
+        <span class="text-secondary">Category: Fishing</span>
+        <span class="text-secondary">01.03.14 13:33</span>
+      </div>
+      <div *ngIf="isPlay" class="w-100 d-flex align-items-center">
+        <button mat-icon-button><mat-icon>replay_10</mat-icon></button>
+        <button mat-icon-button><mat-icon>forward_10</mat-icon></button>
+        <mat-slider value="50" class="w-100"></mat-slider>
+      </div>
+      <div class="w-100 align-items-center justify-content-end d-flex">
+        <button mat-button>
+          <mat-icon>thumb_up</mat-icon>
+          <span class="ml-2">7</span>
+        </button>
+        <button mat-button>
+          <mat-icon>thumb_down</mat-icon>
+          <span class="ml-2">7</span>
+        </button>
+      </div>
+    </div>
+    <mat-divider inset></mat-divider>
+  </mat-list-item>
+</mat-list>
