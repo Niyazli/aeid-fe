@@ -7,10 +7,11 @@
 @import 'text';
 @import 'size';
 @import 'scrollbar';
+@import 'font';
 
 body {
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
@@ -20,8 +21,8 @@ body {
 
 .container {
   @include desktop() {
-    margin: 0 0 0 230px;
-    max-width: calc(100% - 230px);
+    margin: 0 0 0 170px;
+    max-width: calc(100% - 170px);
     padding: 0;
   }
 }

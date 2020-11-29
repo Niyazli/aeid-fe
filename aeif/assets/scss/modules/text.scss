@@ -1,0 +1,50 @@
+@import 'variable';
+
+.text {
+  /*COLOR*/
+  &-secondary {
+    color: $text-secondary !important;
+  }
+  &-white {
+    color: $bg-light !important;
+  }
+  &-primary-red {
+    color: $text-primary-red !important;
+  }
+
+  /*WEIGHT*/
+  &-bold {
+    font-weight: bold !important;
+  }
+
+  /*WRAP*/
+  &-nowrap {
+    white-space: normal !important;
+  }
+
+  /*SHORT CUT*/
+  &-cut {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+
+    -webkit-line-clamp: 1;
+
+    &.max-line-1 {
+      -webkit-line-clamp: 1;
+    }
+    &.max-line-2 {
+      -webkit-line-clamp: 2;
+    }
+    &.max-line-3 {
+      -webkit-line-clamp: 3;
+    }
+    &.max-line-4 {
+      -webkit-line-clamp: 4;
+    }
+    &.max-line-5 {
+      -webkit-line-clamp: 5;
+    }
+  }
+}
