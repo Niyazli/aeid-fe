@@ -1,0 +1,11 @@
+.post {
+  &-content {
+    height: 550px;
+    overflow-y: auto;
+  }
+  &-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

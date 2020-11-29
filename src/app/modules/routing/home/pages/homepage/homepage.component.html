@@ -1,0 +1,8 @@
+<ui-layout>
+  <header *ngIf="sidebarState !== 'open'">
+    <app-page-filtering></app-page-filtering>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</ui-layout>

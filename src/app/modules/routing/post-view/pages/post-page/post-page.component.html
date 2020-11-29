@@ -1,0 +1,32 @@
+<mat-card>
+  <div class="row">
+    <div class="col-12">
+      <button class="button button-back" (click)="back()">
+        <mat-icon>navigate_before</mat-icon>
+        Back
+      </button>
+    </div>
+    <div class="col-12">
+      <app-post-content></app-post-content>
+    </div>
+  </div>
+</mat-card>
+<div class="row">
+  <div class="col-12 mt-3">
+    <!--    <mat-divider inset class="my-3"></mat-divider>-->
+    <div class="user">
+      <mat-list>
+        <mat-list-item>
+          <img class="user-avatar" src="https://i.pinimg.com/originals/a5/07/3f/a5073ff8e435d1f9970b520251b5dd7a.jpg" alt="" mat-list-avatar />
+          <p mat-line>Author: Name Surname</p>
+          <p mat-line>School Teacher</p>
+        </mat-list-item>
+      </mat-list>
+
+      <div class="user-action">
+        <button mat-button><mat-icon>favorite_border</mat-icon></button>
+        <button mat-raised-button color="primary" class="rounded-pill">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
