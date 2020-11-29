@@ -6,6 +6,7 @@
 @import 'button';
 @import 'text';
 @import 'size';
+@import 'scrollbar';
 
 body {
   font-family: sans-serif;
@@ -18,8 +19,6 @@ body {
 }
 
 .container {
-  //outline: 1px dashed red;
-
   @include desktop() {
     margin: 0 0 0 230px;
     max-width: calc(100% - 230px);
