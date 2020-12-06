@@ -4,8 +4,8 @@
   </div>
   <div class="header-actions">
     <div class="button-group">
-      <button class="rounded-pill" mat-raised-button>Register</button>
-      <button class="rounded-pill button button-white" mat-stroked-button>Log in</button>
+      <button class="rounded-pill" mat-raised-button localization>Register</button>
+      <button class="rounded-pill button button-white" mat-stroked-button localization>Log in</button>
       <button mat-button [matMenuTriggerFor]="menu" class="button button-white">
         {{ ($activeLanguage | async)?.alpha2 | uppercase }}
         <mat-icon class="text-white">keyboard_arrow_down</mat-icon>

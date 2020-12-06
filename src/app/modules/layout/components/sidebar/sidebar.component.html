@@ -2,10 +2,10 @@
   <ul class="menu">
     <li *ngFor="let item of menuItems" class="menu-item">
       <a [routerLink]="item.link" routerLinkActive="active" class="menu-item--wrapper">
-        <h4 class="menu-item--label">{{ item.label }}</h4>
-        <span class="menu-item--description">{{ item.description }}</span>
+        <h4 class="menu-item--label" localization>{{ item.label | uppercase }}</h4>
+        <span class="menu-item--description" localization>{{ item.description }}</span>
         <span class="menu-item--action">
-          <button class="button button-white rounded-pill" mat-stroked-button>{{ item.action.label }}</button>
+          <button class="button button-white rounded-pill" mat-stroked-button localization>{{ item.action.label }}</button>
         </span>
       </a>
     </li>
