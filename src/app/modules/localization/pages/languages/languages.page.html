@@ -1,0 +1,13 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let language of $languages | async">
+    <a matLine>{{ language.name }}</a>
+    <button mat-icon-button (click)="openLanguageModal(language)" color="primary">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-nav-list>
+<div class='actions d-flex justify-content-between'>
+  <button class="add-button" mat-raised-button color="primary" (click)="openLanguageModal()">Create language</button>
+  <button class="add-button" mat-raised-button color="primary" (click)="openConfigurationModal()">Add Configuration for project</button>
+</div>

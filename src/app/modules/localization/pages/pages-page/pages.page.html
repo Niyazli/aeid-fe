@@ -1,0 +1,21 @@
+<mat-form-field class="w-100 px-3">
+  <input type="text" matInput #search placeholder="Type keyword" />
+</mat-form-field>
+
+<!--<mat-list role="list">-->
+<!--  <mat-list-item role="listitem" *ngFor="let page of $pagesFiltered | async">-->
+<!--    <span class="cut-text">{{ page.name }}</span>-->
+<!--    <button mat-icon-button color="primary" (click)="navigateToTranslations(page)"><mat-icon>search</mat-icon></button>-->
+<!--    <mat-divider></mat-divider>-->
+<!--  </mat-list-item>-->
+<!--</mat-list>-->
+
+<mat-nav-list>
+  <mat-list-item *ngFor="let page of $pagesFiltered | async">
+    <a matLine>{{ page.name }}</a>
+    <button mat-icon-button (click)="navigateToTranslations(page)" color="primary">
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-nav-list>

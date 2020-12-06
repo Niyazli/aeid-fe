@@ -1,0 +1,27 @@
+<mat-form-field class="w-100 px-3">
+  <input type="text" matInput #search placeholder="Type keyword" />
+</mat-form-field>
+
+<!--<mat-list role="list">-->
+<!--  <mat-list-item role="listitem" *ngFor="let project of $projectsFiltered | async">-->
+<!--    <span class="cut-text">{{ project.name }}</span>-->
+<!--    <button mat-icon-button color="primary" (click)="openProjectModal(project)"><mat-icon>edit</mat-icon></button>-->
+<!--    <button mat-icon-button color="primary" (click)="navigateToTranslations(project)"><mat-icon>search</mat-icon></button>-->
+<!--    <mat-divider></mat-divider>-->
+<!--  </mat-list-item>-->
+<!--</mat-list>-->
+
+<mat-nav-list>
+  <mat-list-item *ngFor="let project of $projectsFiltered | async">
+    <a matLine>{{ project.name }}</a>
+    <button mat-icon-button (click)="openProjectModal(project)" color="primary">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="navigateToTranslations(project)" color="primary">
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-nav-list>
+
+<button class="add-button" mat-raised-button color="primary" (click)="openProjectModal()">Create project</button>

@@ -1,0 +1,6 @@
+enum ModuleName {
+  ACCREDITATION = 'ACCREDITATION',
+  GOVERNMENT_PROCESS = 'GOVERNMENT_PROCESS'
+}
+
+export { ModuleName };

@@ -7,12 +7,13 @@
       <button class="rounded-pill" mat-raised-button>Register</button>
       <button class="rounded-pill button button-white" mat-stroked-button>Log in</button>
       <button mat-button [matMenuTriggerFor]="menu" class="button button-white">
-        AZ
+        {{ ($activeLanguage | async)?.alpha2 | uppercase }}
         <mat-icon class="text-white">keyboard_arrow_down</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>AZ</button>
-        <button mat-menu-item>EN</button>
+        <button mat-menu-item *ngFor="let language of $languages | async" (click)="setActiveLanguage(language)">
+          {{ language.alpha2 | uppercase }}
+        </button>
       </mat-menu>
     </div>
   </div>

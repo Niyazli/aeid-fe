@@ -1,0 +1,20 @@
+.wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #00000040;
+  z-index: 7;
+
+  mat-spinner {
+    width: 100%;
+    align-self: center;
+  }
+  mat-progress-bar {
+    width: 100%;
+    align-self: flex-start;
+  }
+}

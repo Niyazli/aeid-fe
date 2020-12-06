@@ -1,0 +1,11 @@
+.language {
+  &--info {
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.j-c-b {
+  justify-content: space-between;
+}

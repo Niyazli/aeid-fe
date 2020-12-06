@@ -135,6 +135,7 @@
   },
   "defaultProject": "aeif",
   "cli": {
-    "analytics": "81d7cf15-99c5-4b3e-aed3-738ae3df8e72"
+    "analytics": "81d7cf15-99c5-4b3e-aed3-738ae3df8e72",
+    "defaultCollection": "@datorama/akita"
   }
 }
