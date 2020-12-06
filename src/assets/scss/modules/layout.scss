@@ -15,18 +15,41 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
-  background: linear-gradient(244.53deg, #00c898 0%, #2bd7c2 100%);
-  background-color: $primary-color;
+  background: $primary-color linear-gradient(244.53deg, #00c898 0%, #2bd7c2 100%);
 }
 
 mat-drawer-content {
-  background: linear-gradient(244.53deg, #00c898 0%, #2bd7c2 100%);
-  background-color: $primary-color;
+  background: $primary-color linear-gradient(244.53deg, #00c898 0%, #2bd7c2 100%);
 }
 .container {
   @include desktop() {
     margin: 0 0 0 170px;
     max-width: calc(100% - 170px);
     padding: 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50px;
+      content: '';
+      height: 17%;
+      width: 1px;
+      background-color: $white-opacity;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      content: '';
+      height: 17%;
+      width: 1px;
+      background-color: $white-opacity;
+    }
+
+    header.header {
+      margin-left: 100px;
+    }
   }
 }

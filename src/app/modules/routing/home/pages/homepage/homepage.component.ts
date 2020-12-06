@@ -7,13 +7,11 @@ import {LayoutService} from '../../../../layout/services/layout.service';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  sidebarState: 'open' | 'close';
+  filterBarState: 'show' | 'hide';
 
   constructor(private layoutService: LayoutService) {}
 
   ngOnInit(): void {
-    this.layoutService.toggleSidenav$.subscribe(state => {
-      this.sidebarState = state;
-    });
+    this.layoutService.filterBarState$.subscribe(state => (this.filterBarState = state));
   }
 }

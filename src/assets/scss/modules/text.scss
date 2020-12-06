@@ -11,10 +11,16 @@
   &-primary-red {
     color: $text-primary-red !important;
   }
+  &-primary {
+    color: $primary-color !important;
+  }
 
   /*WEIGHT*/
   &-bold {
     font-weight: bold !important;
+  }
+  &-regular {
+    font-weight: normal !important;
   }
 
   /*WRAP*/

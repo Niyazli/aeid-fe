@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 50px;
+  font-size: 1.15rem;
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none inside none;
+
+    li {
+      &::before {
+        content: '-';
+        margin-right: 10px;
+      }
+    }
+  }
+}
