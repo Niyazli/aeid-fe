@@ -19,21 +19,6 @@ export const FADE_ANIMATION = trigger('tooltip', [
   selector: 'localization-tooltip',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!--    <div-->
-    <!--      [@simpleFadeAnimation]="'in'"-->
-    <!--      [ngStyle]="{transform: 'translate(' + position.left + 'px, ' + position.top + 'px)'}"-->
-    <!--      class="localization-tooltip"-->
-    <!--      *ngIf="tooltipService.tooltipVisibility | async"-->
-    <!--    >-->
-    <!--      <div class="localization-tooltip-text">-->
-    <!--        <em>{{ tooltipContent?.label }} ({{ tooltipContent?.keyword }})</em>-->
-    <!--        <mat-progress-bar mode="indeterminate" *ngIf="localizationService.$isLoading | async"></mat-progress-bar>-->
-    <!--      </div>-->
-    <!--      <div class="localization-tooltip-actions">-->
-    <!--        <button mat-icon-button *ngIf="!($word | async)" (click)="createSimple()"><mat-icon>add</mat-icon></button>-->
-    <!--        <button mat-icon-button *ngIf="$word | async" (click)="edit()"><mat-icon>edit</mat-icon></button>-->
-    <!--      </div>-->
-    <!--    </div>-->
     <div @tooltip class="localization-tooltip">
       <div class="localization-tooltip-text">
         <em>{{ label }} ({{ keyword }})</em>

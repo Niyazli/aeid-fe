@@ -2,7 +2,7 @@ import {IMenuItem} from '../interfaces/menu-item.interface';
 
 export const MENU_ITEMS: IMenuItem[] = [
   {
-    label: 'VİDEOLAR',
+    label: 'Videos',
     description:
       'Text of the video category where possibly we need to think and add something cuz this part will inform about smth system users or may be we can add text of how to apply for blogger',
     link: 'video',
@@ -12,7 +12,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     },
   },
   {
-    label: 'PODKASTLAR',
+    label: 'Podcasts',
     description:
       'Text of the video category where possibly we need to think and add something cuz this part will inform about smth system users or may be we can add text of how to apply for blogger',
     link: 'podcast',
@@ -22,7 +22,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     },
   },
   {
-    label: 'FORUM',
+    label: 'Forum',
     description:
       'Text of the video category where possibly we need to think and add something cuz this part will inform about smth system users or may be we can add text of how to apply for blogger',
     link: 'forum',
@@ -32,7 +32,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     },
   },
   {
-    label: 'YARDIM',
+    label: 'Help',
     description:
       'Text of the video category where possibly we need to think and add something cuz this part will inform about smth system users or may be we can add text of how to apply for blogger',
     link: 'help',
@@ -42,7 +42,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     },
   },
   {
-    label: 'HAQQIMIZDA',
+    label: 'About',
     description:
       'Text of the video category where possibly we need to think and add something cuz this part will inform about smth system users or may be we can add text of how to apply for blogger',
     link: 'about',

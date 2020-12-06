@@ -7,10 +7,11 @@ import {MaterialModule} from '../material/material.module';
 import {CommentChatModule} from '../widget/comment-chat/comment-chat.module';
 import {SharedModule} from '../shared/shared.module';
 import {RouterModule} from '@angular/router';
+import {LocalizationModule} from '../localization';
 
 @NgModule({
   declarations: [LayoutComponent, SidebarComponent, HeaderComponent],
-  imports: [CommonModule, MaterialModule, CommentChatModule, SharedModule, RouterModule],
+  imports: [CommonModule, MaterialModule, CommentChatModule, SharedModule, RouterModule, LocalizationModule],
   exports: [LayoutComponent],
 })
 export class LayoutModule {}
