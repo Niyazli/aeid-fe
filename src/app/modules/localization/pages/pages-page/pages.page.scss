@@ -1,0 +1,9 @@
+.cut-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+}
+.pl-3 {
+  padding-left: 1rem;
+}

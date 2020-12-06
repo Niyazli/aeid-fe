@@ -5,6 +5,7 @@ import { ForumRoutingModule } from './forum-routing.module';
 import { ForumPageComponent } from './pages/forum-page/forum-page.component';
 import { ForumBoxComponent } from './components/forum-box/forum-box.component';
 import {MaterialModule} from '../../material/material.module';
+import {LocalizationModule} from '../../localization';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {MaterialModule} from '../../material/material.module';
   imports: [
     CommonModule,
     ForumRoutingModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    LocalizationModule,
+  ],
 })
 export class ForumModule { }

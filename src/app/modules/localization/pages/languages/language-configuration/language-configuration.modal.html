@@ -1,0 +1,20 @@
+<div mat-dialog-title class="d-flex a-i-c j-c-b">
+  <span>{{language.id ? 'Edit language' : 'Create language'}}</span>
+  <button mat-icon-button color="warn" (click)="dialog.close()"><mat-icon>close</mat-icon></button>
+</div>
+
+<div mat-dialog-content>
+  <div class="language language--info">
+    <mat-form-field>
+      <mat-label>Language</mat-label>
+      <mat-select [(ngModel)]="configuration.languageId">
+        <mat-option *ngFor="let language of ($languages | async)" [value]="language.id">{{ language.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-checkbox color="primary" [(ngModel)]="configuration.isActive"> Active </mat-checkbox>
+    <mat-checkbox color="primary" [(ngModel)]="configuration.isDefault"> Default </mat-checkbox>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)='save()'>Save</button>
+</div>

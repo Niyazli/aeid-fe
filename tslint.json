@@ -66,12 +66,12 @@
       ]
     },
     "variable-name": {
-      "options": ["ban-keywords", "check-format", "allow-pascal-case"]
+      "options": ["ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore", "allow-snake-case"]
     },
     "whitespace": {
       "options": ["check-branch", "check-decl", "check-operator", "check-separator", "check-type", "check-typecast"]
     },
-    "component-class-suffix": true,
+    "component-class-suffix": false,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "no-conflicting-lifecycle": true,

@@ -1,0 +1,75 @@
+<div mat-dialog-title class="d-flex align-content-center justify-content-end">
+  <span></span>
+  <button mat-icon-button color="warn" (click)="dialog.close()"><mat-icon>close</mat-icon></button>
+</div>
+
+<div mat-dialog-content custom-loader [loadingState]="!word">
+  <div class="word word--info" *ngIf="word">
+    <mat-chip-list aria-label="Translations">
+      <mat-chip color="accent" selected>{{ word.translations?.length }} Languages Translated of {{ ($languages | async)?.length }} Languages</mat-chip>
+      <mat-chip color="primary" selected (click)="handleUntranslatedTab()"><mat-icon>add</mat-icon></mat-chip>
+    </mat-chip-list>
+    <mat-form-field>
+      <mat-label>ID</mat-label>
+      <textarea matInput [(ngModel)]="word.id" disabled></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Keyword</mat-label>
+      <textarea matInput [(ngModel)]="word.keyword" disabled></textarea>
+    </mat-form-field>
+    <mat-tab-group [selectedIndex]="selectedIndex">
+      <mat-tab *ngFor="let translation of word.translations">
+        <ng-template matTabLabel>
+          <span>{{ translation.language.name }}</span>
+        </ng-template>
+        <ng-template matTabContent>
+          <div class="word word--info mt-3">
+<!--            custom-loader [loadingState]="($isLoading | async)"-->
+            <mat-form-field>
+              <mat-label>Translation</mat-label>
+              <textarea matInput [(ngModel)]="translation.text"></textarea>
+<!--              [disabled]="($isLoading | async)"-->
+            </mat-form-field>
+          </div>
+          <div class="d-flex align-content-center justify-content-center">
+            <button mat-raised-button color="primary" (click)="handleTranslationUpdate(translation)">
+<!--              [disabled]="($isLoading | async)"-->
+              Save Current Translation
+            </button>
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab>
+        <ng-template matTabLabel>
+          <span>Add Translation</span>
+        </ng-template>
+        <ng-template matTabContent>
+          <div class="word word--info">
+            <mat-form-field>
+              <mat-label>Select Language</mat-label>
+              <mat-select required #selectedLanguage>
+                <mat-option *ngFor="let language of (getAvailableLanguages() | async)" [value]="language.id">
+                  {{ language.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Translation Text</mat-label>
+              <input matInput required type="text" #translationText />
+            </mat-form-field>
+            <div class="d-flex align-content-center justify-content-center">
+              <button mat-raised-button color="primary" (click)="addTranslation()">
+<!--                [disabled]="($isLoading | async)"-->
+                Add Current Translation
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="handleTranslationsUpdate()">Save All</button>
+<!--  [disabled]="($isLoading | async)"-->
+</div>

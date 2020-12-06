@@ -19,6 +19,10 @@ body {
   background-color: $primary-color;
 }
 
+mat-drawer-content {
+  background: linear-gradient(244.53deg, #00c898 0%, #2bd7c2 100%);
+  background-color: $primary-color;
+}
 .container {
   @include desktop() {
     margin: 0 0 0 170px;

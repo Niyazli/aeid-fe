@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import {LayoutModule} from '../../layout/layout.module';
 import {SharedModule} from '../../shared/shared.module';
+import {LocalizationModule} from '../../localization';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import {SharedModule} from '../../shared/shared.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
+    LocalizationModule,
     LayoutModule,
     SharedModule
   ]

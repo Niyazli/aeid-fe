@@ -1,0 +1,33 @@
+<mat-form-field class="w-100 px-3">
+  <input type="text" matInput #search placeholder="Type keyword" />
+</mat-form-field>
+<div class="pl-3 project" *ngIf="project">
+  <span>Project:</span><span>{{project.name}}</span>
+  <button mat-icon-button color="warn" (click)="reset()"><mat-icon>close</mat-icon></button>
+</div>
+<!--<mat-list role="list">-->
+<!--  <mat-list-item-->
+<!--    role="listitem"-->
+<!--    *ngFor="let translation of $translationsFiltered | async"-->
+<!--    [matTooltip]=" translation.page.name + ' / ' + translation.text"-->
+<!--  >-->
+<!--    <span class="cut-text"-->
+<!--      ><button mat-button color="primary" class="page" (click)="navigateToPage(translation.page)">{{ translation.page.name }}</button> / {{-->
+<!--      translation.text }}</span-->
+<!--    >-->
+<!--    <button mat-icon-button color="primary" (click)="edit(translation)"><mat-icon>edit</mat-icon></button>-->
+<!--    <mat-divider></mat-divider>-->
+<!--  </mat-list-item>-->
+<!--</mat-list>-->
+<mat-nav-list>
+  <mat-list-item *ngFor="let translation of $translationsFiltered | async" [matTooltip]=" translation.page.name + ' / ' + translation.text">
+    <a matLine>
+      <button mat-button color="primary" (click)="navigateToPage(translation.page)">{{translation.page.name}}</button>
+      {{ translation.text }}
+    </a>
+    <button mat-icon-button (click)="edit(translation)" color="primary">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-nav-list>
